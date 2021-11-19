@@ -1,24 +1,19 @@
 const { Schema, model } = require("mongoose");
 const FacturaEncabezadoSchema = new Schema(
   {
-     IdFD:Number,
-     Vuelo:[
+     IdFE:Number,
+     Usuario:[
     {
         type:Schema.Types.ObjectId,
-        ref:"Vuelo"
+        ref:"Usuario"
     }
      ],    
-     Pais:String,
-     Asiento:[
-        {
-            type:Schema.Types.ObjectId,
-            ref:"Asiento",
-        }
-    ],
-    Precio:Number,
-    Impuesto:Number
+     Fecha:Date,
+    TipoPago:String,
+    Estado:String,
+    TipoTiquete:String
   },
   { timestamps: true }
 );
-const FacturaDModel = model("facturaDetalle",FacturaEncabezadoSchema);
+const FacturaDModel = model("facturaEncabezado",FacturaEncabezadoSchema);
 module.exports = FacturaDModel;
