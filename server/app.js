@@ -13,9 +13,10 @@ const passport = require('passport');
 //npm install dotenv --save
 //npm install cors --save
 //npm install passport
-//npm morgan --save
+//npm install morgan --save
 // npm install --save-dev nodemon
 //npm install chalk
+//npm install -g @angular/cli
 
 //instalación de paquetes para passport
 //npm install  bcrypt-nodejs jsonwebtoken  passport passport-jwt --save
@@ -31,6 +32,7 @@ const areoLineaRouter = require("./routes/aereoLinea");
 const avionRouter = require("./routes/avion");
 const vueloRouter = require("./routes/vuelo");
 const facturaDRouter = require("./routes/facturaD");
+const facturaERouter = require("./routes/facturaE");
 const asientoRouter = require("./routes/Asiento");
 
 // esta linea ayuda a leer la configuracion que tenemos en el archivo .env
@@ -73,6 +75,7 @@ app.use("/aereoLinea/", areoLineaRouter);
 app.use("/avion/", avionRouter);
 app.use("/vuelo",vueloRouter)
 app.use("/facturaD",facturaDRouter)
+app.use("/facturaE",facturaERouter)
 app.use("/asiento",asientoRouter)
 
 

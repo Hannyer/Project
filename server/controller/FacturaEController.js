@@ -19,17 +19,17 @@ module.exports.create = (req, res, next) => {
 };
 
 module.exports.delete = async (req, res, next) => {
-  const facturaD = await FacturaEModel.findByIdAndRemove(req.params.id);
+  const facturaE = await FacturaEModel.findByIdAndRemove(req.params.id);
   // si post es null significa que no existe el registro
-  if (facturaD) {
-    res.json({ result: `Usuario borrado correctamente`, facturaE: facturaE });
+  if (facturaE) {
+    res.json({ result: `Registro borrado correctamente`, facturaE: facturaE });
   } else {
     res.json({ result: "Id de factura Invalida Invalid", facturaE: facturaE });
   }
 };
 
 module.exports.update = async (req, res, next) => {
-  const {{IdFE,Usuario,Fecha,TipoPago,Estado,TipoTiquete} = req.body;
+  const {IdFE,Usuario,Fecha,TipoPago,Estado,TipoTiquete} = req.body;
   const facturaD = await FacturaEModel.findOneAndUpdate(
    
     { _id: req.params.id },
