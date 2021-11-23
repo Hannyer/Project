@@ -1,13 +1,13 @@
 <div class="list row">
   
     <div class="col-md-6">
-      <h4>Lista de Facturas</h4>
+      <h4>Lista de Usuarios</h4>
       <ul class="list-group">
         <li
           class="list-group-item"
           *ngFor="let usuario of usuarios; let i = index"
           [class.active]="i == currentIndex"
-          (click)="setActiveUsuario(usuario, i)"
+          (click)="setActiveUser(usuario, i)"
         >
           Ced. Nombre. {{ usuario.cedula }}, {{ usuario.nombre }} 
         </li>
@@ -15,7 +15,7 @@
 
     </div>
     <div class="col-md-6">
-      <app-factura-details
+      <app-usuario-details
         [viewMode]="false"
         [currentUsuario]="currentUsuario"
       ></app-usuario-details>
