@@ -1,4 +1,0 @@
-Tenes los permisos suficientes para ejecutar scripts en la LocalMachine sin embargo el problema esta en el current user. Las soluciones que te han dado son para habilitar los scripts a nivel "general"
- por asi decirlo, pero no resolvera tu problema. El comando que nescesitas en tu caso es:
-
-set-executionpolicy unrestricted -scope CurrentUser
